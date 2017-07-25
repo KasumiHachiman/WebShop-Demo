@@ -53,6 +53,28 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShop.Common\WebShop.Common.csproj">
+      <Project>{08a16b64-071f-444f-a554-2223f6708163}</Project>
+      <Name>WebShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Data\WebShop.Data.csproj">
+      <Project>{576f7211-1a4d-4111-8d14-e096e1520ddf}</Project>
+      <Name>WebShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Model\WebShop.Model.csproj">
+      <Project>{cabb91e3-07ca-4660-aa5b-76419351f3cf}</Project>
+      <Name>WebShop.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Service\WebShop.Service.csproj">
+      <Project>{2aaa13e5-92d7-4b78-8910-e2464a37a2b2}</Project>
+      <Name>WebShop.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Web\WebShop.Web.csproj">
+      <Project>{31c144bc-2aa2-4a1d-958d-4b65d9f5c2f7}</Project>
+      <Name>WebShop.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
