@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebShop.Data.Infrastructure
 {
-    class UnitOfWork : Disposable, IUnitOfWork
+    public class UnitOfWork : Disposable, IUnitOfWork
     {
         private readonly IDBFactory _dbFactory;
         private WebShopDbContext _dbContext;

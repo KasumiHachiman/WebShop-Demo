@@ -20,7 +20,7 @@ namespace WebShop.Data.Infrastructure
                 DisposeCore();
             _isDisposed = true;
         }
-        public virtual void DisposeCore()
+        protected virtual void DisposeCore()
         {
 
         }

@@ -17,7 +17,7 @@ namespace WebShop.Data.Repositories
         public PostRepository(IDBFactory dbFactory) : base(dbFactory)
         {
 
-        }
+        } 
 
         public IEnumerable<Post> GetAllByTag(string tag, int pageIndex, int pageSize, out int totalRow)
         {

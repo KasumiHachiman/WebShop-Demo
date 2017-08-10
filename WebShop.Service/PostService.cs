@@ -30,13 +30,11 @@ namespace WebShop.Service
         {
             this._postRepository = postRepository;
             this._unitOfWork = uniOfWork;
-
         }
         public void Add(Post post)
         {
             _postRepository.Add(post);
         }
-
         public void Delete(string id)
         {
             _postRepository.Delete(id);
