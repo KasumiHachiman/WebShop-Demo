@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class VisitorStatisticMapper : EntityTypeConfiguration<VisitorStatistic>
+    public class VisitorStatisticMapper : EntityTypeConfiguration<VisitorStatistic>
     {
         public VisitorStatisticMapper()
         {

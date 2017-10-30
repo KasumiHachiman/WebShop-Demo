@@ -31,7 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +50,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramworkRepository\Disposable.cs" />
+    <Compile Include="EntityFramworkRepository\GenericRepository.cs" />
+    <Compile Include="EntityFramworkRepository\WebShopDbContextFactory.cs" />
+    <Compile Include="Interface\IErrorRepository.cs" />
+    <Compile Include="Interface\IFooterRepository.cs" />
+    <Compile Include="Interface\IMenuGroupRepository.cs" />
+    <Compile Include="Interface\IMenuRepository.cs" />
+    <Compile Include="Interface\IOrderDetailRepository.cs" />
+    <Compile Include="Interface\IOrderRepository.cs" />
+    <Compile Include="Interface\IPageRepository.cs" />
+    <Compile Include="Interface\IPostCategoryRepository.cs" />
+    <Compile Include="Interface\IPostRepository.cs" />
+    <Compile Include="Interface\IPostTagRepository.cs" />
+    <Compile Include="Interface\IProductCategoryRepository.cs" />
+    <Compile Include="Interface\IProductRepository.cs" />
+    <Compile Include="Interface\IProductTagRepository.cs" />
+    <Compile Include="Interface\IRepository.cs" />
+    <Compile Include="Interface\ISlideRepository.cs" />
+    <Compile Include="Interface\ISupportOnlineRepository.cs" />
+    <Compile Include="Interface\ISystemConfigRepository.cs" />
+    <Compile Include="Interface\ITagRepository.cs" />
+    <Compile Include="Interface\IVisitorStatisticRepository.cs" />
+    <Compile Include="Interface\IWebShopDbContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebShopDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MemoryRepository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShop.Common\WebShop.Common.csproj">
+      <Project>{08a16b64-071f-444f-a554-2223f6708163}</Project>
+      <Name>WebShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Model\WebShop.Model.csproj">
+      <Project>{cabb91e3-07ca-4660-aa5b-76419351f3cf}</Project>
+      <Name>WebShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

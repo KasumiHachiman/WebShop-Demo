@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class OrderDetailMapper : EntityTypeConfiguration<OrderDetail>
+    public class OrderDetailMapper : EntityTypeConfiguration<OrderDetail>
     {
         public OrderDetailMapper()
         {

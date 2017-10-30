@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class FooterMapper : EntityTypeConfiguration<Footer>
+    public class FooterMapper : EntityTypeConfiguration<Footer>
     {
         public FooterMapper()
         {

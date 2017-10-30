@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class MenuMapper : EntityTypeConfiguration<Menu>
+    public class MenuMapper : EntityTypeConfiguration<Menu>
     {
         public MenuMapper()
         {

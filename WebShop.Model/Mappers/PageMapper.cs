@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class PageMapper : EntityTypeConfiguration<Page>
+    public class PageMapper : EntityTypeConfiguration<Page>
     {
         public PageMapper()
         {

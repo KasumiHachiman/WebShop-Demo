@@ -4,7 +4,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class ErrorMapper : EntityTypeConfiguration<Error>
+    public class ErrorMapper : EntityTypeConfiguration<Error>
     {
         public ErrorMapper()
         {

@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class ProductMapper : EntityTypeConfiguration<Product>
+    public class ProductMapper : EntityTypeConfiguration<Product>
     {
         public ProductMapper()
         {

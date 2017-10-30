@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class TagMapper : EntityTypeConfiguration<Tag>
+    public class TagMapper : EntityTypeConfiguration<Tag>
     {
         public TagMapper()
         {

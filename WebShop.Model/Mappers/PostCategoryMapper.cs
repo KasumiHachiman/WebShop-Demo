@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class PostCategoryMapper : EntityTypeConfiguration<PostCategory>
+    public class PostCategoryMapper : EntityTypeConfiguration<PostCategory>
     {
         public PostCategoryMapper()
         {

@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class PostTagMapper : EntityTypeConfiguration<PostTag>
+    public class PostTagMapper : EntityTypeConfiguration<PostTag>
     {
         public PostTagMapper()
         {

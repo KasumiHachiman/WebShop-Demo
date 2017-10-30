@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class SlideMapper : EntityTypeConfiguration<Slide>
+    public class SlideMapper : EntityTypeConfiguration<Slide>
     {
         public SlideMapper()
         {

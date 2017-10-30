@@ -3,7 +3,7 @@ using WebShop.Model.Models;
 
 namespace WebShop.Model.Mappers
 {
-    internal class SystemConfigMapper : EntityTypeConfiguration<SystemConfig>
+    public class SystemConfigMapper : EntityTypeConfiguration<SystemConfig>
     {
         public SystemConfigMapper()
         {
