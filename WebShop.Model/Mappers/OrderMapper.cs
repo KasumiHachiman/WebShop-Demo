@@ -17,7 +17,7 @@ namespace WebShop.Model.Mappers
 
             this.Property(e => e.CustomerAddress).IsRequired();
             this.Property(e => e.CustomerAddress).HasMaxLength(356);
-
+          
             this.Property(e => e.CustomerEmail).HasMaxLength(256);
             this.Property(e => e.CustomerMobile).HasMaxLength(256);
             this.Property(e => e.CustomerMessage).HasMaxLength(500);

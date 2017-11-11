@@ -7,7 +7,7 @@ namespace WebShop.Data
     public class WebShopDbContext : DbContext
     {
         public WebShopDbContext()
-            :base("webshopconnection")
+            :base("webshop")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;

@@ -18,13 +18,13 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.URL).IsRequired();
             this.Property(e => e.URL).HasMaxLength(256);
 
-            this.Property(e => e.GroupID).IsRequired();
+            //this.Property(e => e.GroupID).IsRequired();
             this.Property(e => e.Target).HasMaxLength(10);
 
             this.Property(e => e.Status).IsRequired();
 
-            //this.HasOptional(e => e.MenuGroup).WithMany(e => e.Menus).Map(e => e.MapKey("GroupID")).WillCascadeOnDelete(false);
-            this.HasRequired(e => e.MenuGroup).WithMany().Map(e => e.MapKey("GroupID"));
+            
+            //this.HasRequired(e => e.MenuGroup).WithMany(e => e.Menus).HasForeignKey(x => x.GroupID);
         }
     }
 }

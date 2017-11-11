@@ -23,7 +23,7 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.Alias).IsRequired();
             //this.Property(e => e.Alias).IsUnicode(false);
             this.Property(e => e.Alias).HasColumnType("varchar");
-
+            //this.Property(e => e.CategoryID).IsRequired();
             this.Property(e => e.Content).HasMaxLength(256);
             this.Property(e => e.Description).HasMaxLength(500);
             this.Property(e => e.Image).HasMaxLength(500);
@@ -31,11 +31,11 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.MetaKeyword).HasMaxLength(500);
             //this.Property(e => e.ParentID).HasMaxLength(200);
             this.Property(e => e.UpdatedBy).HasMaxLength(256);
-
+            
             this.Property(e => e.UpdatedDate).IsOptional();
             this.Property(e => e.UpdatedDate).HasColumnType("smalldatetime");
 
-            this.HasRequired(e => e.PostCategory).WithMany(e => e.Posts).Map(e => e.MapKey("CategoryID"));
+            //this.HasRequired(e => e.PostCategory).WithMany(e => e.Posts).HasForeignKey(e => e.CategoryID);//.Map(e => e.MapKey("CategoryID"));
         }
     }
 }

@@ -1,15 +1,13 @@
-﻿using TeduShop.Data.Infrastructure;
-using TeduShop.Model.Models;
+﻿using WebShop.Data.Interface;
+using WebShop.Model.Models;
 
-namespace TeduShop.Data.Repositories
+namespace WebShop.Data.EntityFramworkRepository
 { 
-    public interface IProductRepository : IRepository<Product>
-    {
-    }
+   
 
-    public class ProductRepository : RepositoryBase<Product>, IProductRepository
+    public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public ProductRepository(IDbFactory dbFactory) : base(dbFactory)
+        public ProductRepository(IWebShopDbContextFactory dbFactory) : base(dbFactory)
         {
         }
     }

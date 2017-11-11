@@ -12,8 +12,8 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.ProductID).IsRequired();
             this.Property(e => e.TagID).IsRequired();
 
-            this.HasOptional(e => e.Product).WithMany(e => e.ProductTags).Map(s => s.MapKey("ProductID")).WillCascadeOnDelete(false);
-            this.HasOptional(e => e.Tag).WithMany(e => e.ProductTags).Map(c => c.MapKey("TagID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Product).WithMany(e => e.ProductTags).Map(s => s.MapKey("ProductID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Tag).WithMany(e => e.ProductTags).Map(c => c.MapKey("TagID")).WillCascadeOnDelete(false);
 
         }
     }

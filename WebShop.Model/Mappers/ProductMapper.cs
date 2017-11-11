@@ -21,7 +21,7 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.CreatedDate).IsOptional();
             this.Property(e => e.CreatedDate).HasColumnType("smalldatetime");
             this.Property(e => e.Description).HasMaxLength(500);
-
+            //this.Property(e => e.CategoryID).IsRequired();
             this.Property(e => e.Image).HasMaxLength(256);
             this.Property(e => e.MetaDescription).HasMaxLength(500);
             this.Property(e => e.MetaKeyword).HasMaxLength(256);
@@ -34,7 +34,7 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.UpdatedDate).IsOptional();
             this.Property(e => e.UpdatedDate).HasColumnType("smalldatetime");
 
-            this.HasRequired(c => c.ProductCategory).WithMany(e=>e.Products).Map(s => s.MapKey("CategoryID"));
+            //this.HasRequired(c => c.ProductCategory).WithMany(e => e.Products).HasForeignKey(e => e.CategoryID);//.Map(s => s.MapKey("CategoryID"));
         }
     }
 }

@@ -14,8 +14,8 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.ProductID).IsRequired();
 
             //this.Property(e => e.Quantity).IsRequired();
-            this.HasOptional(e => e.Order).WithMany(e => e.OrderDetails).Map(s => s.MapKey("OrderID")).WillCascadeOnDelete(false);
-            this.HasOptional(e => e.Product).WithMany(e => e.OrderDetails).Map(s => s.MapKey("ProductID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Order).WithMany(e => e.OrderDetails).Map(s => s.MapKey("OrderID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Product).WithMany(e => e.OrderDetails).Map(s => s.MapKey("ProductID")).WillCascadeOnDelete(false);
         }
     }
 }

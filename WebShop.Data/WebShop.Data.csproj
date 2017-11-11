@@ -51,7 +51,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramworkRepository\Disposable.cs" />
+    <Compile Include="EntityFramworkRepository\ErrorRepository.cs" />
+    <Compile Include="EntityFramworkRepository\FooterRepository.cs" />
     <Compile Include="EntityFramworkRepository\GenericRepository.cs" />
+    <Compile Include="EntityFramworkRepository\MenuGroupRepository.cs" />
+    <Compile Include="EntityFramworkRepository\MenuRepository.cs" />
+    <Compile Include="EntityFramworkRepository\OrderDetailRepository.cs" />
+    <Compile Include="EntityFramworkRepository\OrderRepository.cs" />
+    <Compile Include="EntityFramworkRepository\PageRepository.cs" />
+    <Compile Include="EntityFramworkRepository\PostCategoryRepository.cs" />
+    <Compile Include="EntityFramworkRepository\PostRepository.cs" />
+    <Compile Include="EntityFramworkRepository\PostTagRepository.cs" />
+    <Compile Include="EntityFramworkRepository\ProductCategoryRepository.cs" />
+    <Compile Include="EntityFramworkRepository\ProductRepository.cs" />
+    <Compile Include="EntityFramworkRepository\ProductTagRepository.cs" />
+    <Compile Include="EntityFramworkRepository\SlideRepository.cs" />
+    <Compile Include="EntityFramworkRepository\SupportOnlineRepository.cs" />
+    <Compile Include="EntityFramworkRepository\SystemConfigRepository.cs" />
+    <Compile Include="EntityFramworkRepository\TagRepository.cs" />
+    <Compile Include="EntityFramworkRepository\VisitorStatisticRepository.cs" />
     <Compile Include="EntityFramworkRepository\WebShopDbContextFactory.cs" />
     <Compile Include="Interface\IErrorRepository.cs" />
     <Compile Include="Interface\IFooterRepository.cs" />
@@ -73,6 +91,11 @@
     <Compile Include="Interface\ITagRepository.cs" />
     <Compile Include="Interface\IVisitorStatisticRepository.cs" />
     <Compile Include="Interface\IWebShopDbContextFactory.cs" />
+    <Compile Include="Migrations\201711011525380_InitDB.cs" />
+    <Compile Include="Migrations\201711011525380_InitDB.Designer.cs">
+      <DependentUpon>201711011525380_InitDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebShopDbContext.cs" />
   </ItemGroup>
@@ -92,6 +115,11 @@
       <Project>{cabb91e3-07ca-4660-aa5b-76419351f3cf}</Project>
       <Name>WebShop.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711011525380_InitDB.resx">
+      <DependentUpon>201711011525380_InitDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

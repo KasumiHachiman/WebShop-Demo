@@ -20,7 +20,9 @@ namespace WebShop.Data.EntityFramworkRepository
                         orderby p.CreatedDate descending
                         select p;
             totalRow = query.Count();
+            //count moi run query va dem so dong
             query = query.Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            //skip rong muon lay va take tu dong 0 den page index
             return query;
         }
     }

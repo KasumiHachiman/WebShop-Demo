@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
+﻿using System.Collections.Generic;
 using WebShop.Model.Abstract;
 
 namespace WebShop.Model.Models
@@ -19,20 +12,24 @@ namespace WebShop.Model.Models
             ProductTags = new List<ProductTag>();
             OrderDetails = new List<OrderDetail>();
         }
+
         //[Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]// create int autoindentity
         //public int ID { set; get; }
         //[Required]
         //[MaxLength(256)]
         public string Name { set; get; }
+
         //[Required]
         //[Column(TypeName = "varchar")]
         //[MaxLength(256)]
         public string Alias { set; get; }
 
         public int CategoryID { set; get; }
+
         //[MaxLength(256)]
         public string Image { set; get; }
+
         //[Column(TypeName = "xml")]
         public string MoreImages { set; get; }
 
@@ -41,8 +38,10 @@ namespace WebShop.Model.Models
         public decimal? PromotionPrice { set; get; }//? allow null
 
         public int? Warranty { set; get; }
+
         //[MaxLength(500)]
         public string Description { set; get; }
+
         //[MaxLength(500)]
         public string Content { set; get; }
 
@@ -57,6 +56,5 @@ namespace WebShop.Model.Models
 
         public virtual ICollection<ProductTag> ProductTags { set; get; }
         public virtual ICollection<OrderDetail> OrderDetails { set; get; }
-
     }
 }

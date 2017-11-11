@@ -13,8 +13,8 @@ namespace WebShop.Model.Mappers
             this.Property(e => e.PostID).IsRequired();
             this.Property(e => e.TagID).IsRequired();
 
-            this.HasOptional(e => e.Post).WithMany(e => e.PostTags).Map(s => s.MapKey("PostID")).WillCascadeOnDelete(false);
-            this.HasOptional(e => e.Tag).WithMany(e => e.PostTags).Map(c => c.MapKey("TagID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Post).WithMany(e => e.PostTags).Map(s => s.MapKey("PostID")).WillCascadeOnDelete(false);
+            //this.HasOptional(e => e.Tag).WithMany(e => e.PostTags).Map(c => c.MapKey("TagID")).WillCascadeOnDelete(false);
 
 
         }
