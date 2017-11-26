@@ -90,10 +90,6 @@
       <Project>{2aaa13e5-92d7-4b78-8910-e2464a37a2b2}</Project>
       <Name>WebShop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebShop.Web\WebShop.Web.csproj">
-      <Project>{31c144bc-2aa2-4a1d-958d-4b65d9f5c2f7}</Project>
-      <Name>WebShop.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

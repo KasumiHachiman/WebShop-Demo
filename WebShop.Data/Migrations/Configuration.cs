@@ -1,6 +1,8 @@
 namespace WebShop.Data.Migrations
 {
+    using Model.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -26,6 +28,23 @@ namespace WebShop.Data.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            ConfigValue(context);
+        }
+
+        private void ConfigValue(WebShopDbContext context)
+        {
+            List<ProductCategory> listProductCategory = new List<ProductCategory>()
+            {
+                new ProductCategory() { Name="Dien lanh",Alias= "dien-lanh",Status = false },
+                new ProductCategory() { Name="Dien dan dung",Alias= "dien-dan-dung",Status = false },
+                new ProductCategory() { Name="Do gia dung",Alias= "do-gia-dung",Status = true },
+                new ProductCategory() { Name="Vien thong",Alias= "vien-thong",Status = true },
+                new ProductCategory() { Name="My pham",Alias= "vien-thong",Status = false }
+                
+            };
+            context.ProductCategories.AddRange(listProductCategory);
+            context.SaveChanges();
+
         }
     }
 }

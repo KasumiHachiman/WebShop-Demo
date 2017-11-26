@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WebShop.Data.Interface;
 using WebShop.Model.Models;
-using WebShop.Service.Repository;
+using WebShop.Service;
 
 namespace WebShop.UnitTest.ServiceTest
 {

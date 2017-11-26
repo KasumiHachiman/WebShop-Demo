@@ -1,39 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebShop.Model.Models;
-using WebShop.Service.Service;
+using WebShop.Service;
 
 namespace WebShop.Web.Infrastructure.Core
 {
     public class BaseApiController : ApiController
     {
         private IErrorService _errorService;
+
         public BaseApiController(IErrorService errorService)
         {
             this._errorService = errorService;
         }
-        protected HttpResponseMessage CreateHttpResponse(HttpRequestMessage requestMessage,Func<HttpResponseMessage> function)
+
+        protected HttpResponseMessage CreateHttpResponse(HttpRequestMessage requestMessage, Func<HttpResponseMessage> function)
         {
             HttpResponseMessage response = null;
             try
             {
                 response = function.Invoke();
-                
             }
-            catch(DbEntityValidationException ex)
+            catch (DbEntityValidationException ex)
             {
-                foreach(var eve in ex.EntityValidationErrors)
+                foreach (var eve in ex.EntityValidationErrors)
                 {
                     ///show error in error list visual
                     Trace.WriteLine($"Entity of type\"{eve.Entry.GetType().Name}\" in state \"{eve.Entry.State}\"has the following validate error.");
-                    foreach(var ve in eve.ValidationErrors)
+                    foreach (var ve in eve.ValidationErrors)
                     {
                         Trace.WriteLine($"- Properties: \"{ve.PropertyName}\" Error: \"{ve.ErrorMessage}\"");
                     }
@@ -41,7 +40,7 @@ namespace WebShop.Web.Infrastructure.Core
                 LogError(ex);
                 response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
-            catch(DbUpdateException ex)
+            catch (DbUpdateException ex)
             {
                 LogError(ex);
                 response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.InnerException.Message);
@@ -53,6 +52,7 @@ namespace WebShop.Web.Infrastructure.Core
             }
             return response;
         }
+
         private void LogError(Exception ex)
         {
             try
@@ -63,9 +63,9 @@ namespace WebShop.Web.Infrastructure.Core
                 error.StackTrace = ex.StackTrace;
                 _errorService.Create(error);
                 _errorService.Save();
-            }catch
+            }
+            catch
             {
-
             }
         }
     }
